@@ -1,0 +1,13 @@
+---
+- name: "Installing Windows applications"
+  hosts: claus_x1
+  collections:
+    - ansible.windows
+    - community.windows
+#    - geerlingguy.java
+  gather_facts: true
+
+  tasks:
+    - name: "Check windows machine access using win_ping"
+      win_ping:
+
